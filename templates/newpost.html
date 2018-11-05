@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+<body>
+    <style>
+        .error {color: red}
+    </style>
+    {% block content %}
+<a href="http://127.0.0.1:5000/">Home</a>
+
+<a href="http://127.0.0.1:5000/newpost">New Entry</a>
+
+    <center><h1>New Post</h1></center>
+    <center>
+    <form method="POST">
+        <p>Blog Title:</p>
+        <input type="text" name='title'>
+        <p class='error'>{{title_error}}</p>
+        <br><br>
+        <p>New Blog:</p>
+        <textarea rows="10" cols="50" name='content'> 
+        </textarea>
+        <p class='error'>{{blog_error}}</p>
+        <br><br>
+        <input type='submit' value='upload'>
+    </form>
+    </center>
+
+    {% endblock %}
+
+</body>
+</html>
