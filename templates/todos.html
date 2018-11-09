@@ -2,16 +2,17 @@
 
 {% block content %}
 <a href="http://127.0.0.1:5000/">Home</a>
-
+<a href="/mypost">My Blog Post</a>
 <a href="http://127.0.0.1:5000/newpost">New Entry</a>
+<a href="http://127.0.0.1:5000/users">People</a>
+
    <center><h1>Blog Home</h1></center>
    
     <hr />
     {% for post in posts %}
-        
-        
         <a href="http://127.0.0.1:5000/post?id={{post.id}}"><h3>{{post.title}}</h3></a>
-         <p>{{post.content}}</p>
+        <hr>
+        <a href="http://127.0.0.1:5000/post?id={{post.id}}"><p>{{post.content}}</p></a>
     <hr /> 
         
          
